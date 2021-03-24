@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Тебе что тут надо?</title>
+    <link href="{%static 'css/main.css' %}" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+	<p align = "center"> <font size="7" color="white" face="Arial">Всякая информация</font></p>
+  <p align = "center"> <a href="/" class="button">Мне назад</a>
+
+	<p align = "left"><b> IP:</b><p>
+	<p align = "left">{{ip}}</p>
+
+	<p align = "left"><b>System information:</b></p>
+	<p align = "left">{{user_info}}</p>
+
+	<p align = "left"><b> Screen resolution:</b></p>
+	<p align = "left" id = "1"></p>
+	<script>
+	function getResol(){
+		var w = screen.width
+		var h = screen.height
+		var z = w + "x" + h
+		z1 = document.getElementById('1')
+		z1.innerHTML = z
+	}
+	getResol()
+	</script>
+
+	<p align = "left"><b>Browser:</b></p>
+	<p align = "left" id = "2"></p>
+
+	<script>
+		var code = navigator.appCodeName
+		code1 = document.getElementById('2')
+		code1.innerHTML = code
+	</script>
+
+	<p align = "left"><b>OS:</b></p>
+	<p align = "left" id = "3" ></p>
+	<script>
+		var platform = navigator.platform
+		platform1 = document.getElementById('3')
+		platform1.innerHTML = platform
+	</script>
+
+	<p align = "left"><b> System language:</b></p>
+	<p align = "left" id = "4"></p>
+	<script>
+		var UserLang = navigator.language || navigator.userLanguage;
+		UserLang1 = document.getElementById('4')
+		UserLang1.innerHTML = UserLang
+	</script>
+
+	<p align = "left"><b> Cookies:</b></p>
+	<p align = "left" id = "5" ></p>
+	<script>
+		var coock = navigator.cookieEnabled
+		coock1 = document.getElementById('5')
+		coock1.innerHTML = coock
+	</script>
+
+
+	<p align = "left"><b> Platform:</b></p>
+	<p align = "left" id = "6"></p>
+	<script>
+		var name = navigator.appName
+		name1 = document.getElementById('6')
+		name1.innerHTML = name
+	</script>
+
+	<p align = "left"><b> Browser version:</b></p>
+	<p align = "left" id = "7"></p>
+	<script>
+		var version = navigator.appVersion
+		version1 = document.getElementById('7')
+		version1.innerHTML = version
+	</script>
+    </body>
+</html>

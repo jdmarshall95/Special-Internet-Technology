@@ -1,0 +1,17 @@
+body {
+	background-color: #ffffff;
+	font-weight: normal;
+	font-size: .8em;
+	line-height: 1.6em;
+	font-family: 'Nunito', 'Open Sans', Frutiger, Calibri, 'Myriad Pro', Myriad, sans-serif;
+	color: #000;
+	text-align: center;
+	background-color: #3e7cff;
+	background-image: url('../img/wave-haikei.svg');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed; /* fix background gradient */
+	min-height: 100%; /* fix sticky footer */
+	height: auto;
+}
